@@ -7,11 +7,14 @@ With the ongoing rise of e-commerce, warehouses are growing larger in size. Incr
 
 # Data Management
 This software can add or update inventory data stored in a CSV file. The attributes are tag ID, description, arrival time, and shipping time. Positional coordinates are calculated by the data visualization software after the drone flies within range of a RFID tag on a piece of inventory.  
+
 Run command: python3 manageTags.py  
 
 # Data Visualization
 This software creates a 3D graph of inventory, using input files from the MiniStock RFID reader and Pozyx positioning system. The data is processed by finding the indoor positions (x/y/z coordinates in pozyxData.json) associated with the timestamps when RFID tags (tag IDs in ministockData.csv) were read by the drone. The processed data is written to a file (output.csv) and shown using the Plotly Python library.  
+
 Pozyx data collection run command: python3 localconnect.py  
+
 3D visualization run command: python3 finalGraph.py ministockData.csv pozyxData.json output.csv  
 
 # Project Documentation
